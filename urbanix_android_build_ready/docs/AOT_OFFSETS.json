@@ -1,0 +1,83 @@
+{
+  "fuente": "urbanix.apk -> lib/arm64-v8a/libapp.so",
+  "sha256_libapp_arm64": "9bcc7299b6dfb7bdf022aadfd300368353175fb85996e9c971c99c87df8d9b74",
+  "tamano_bytes": 5243792,
+  "hallazgos": [
+    {
+      "cadena": "qrGenerationFailed",
+      "offset_archivo": "0x29a0c",
+      "seccion": ".rodata"
+    },
+    {
+      "cadena": "tickets_v2",
+      "offset_archivo": "0x3bb02",
+      "seccion": ".rodata"
+    },
+    {
+      "cadena": "urbanix/v2/enc",
+      "offset_archivo": "0x2029c",
+      "seccion": ".rodata"
+    },
+    {
+      "cadena": "urbanix/v2/mac",
+      "offset_archivo": "0x32c24",
+      "seccion": ".rodata"
+    },
+    {
+      "cadena": "RSA_ECB_PKCS1Padding",
+      "offset_archivo": "0x26af1",
+      "seccion": ".rodata"
+    },
+    {
+      "cadena": "AES_CBC_PKCS7Padding",
+      "offset_archivo": "0x2cc0a",
+      "seccion": ".rodata"
+    },
+    {
+      "cadena": "rsa_private_key",
+      "offset_archivo": "0x2ce7f",
+      "seccion": ".rodata"
+    },
+    {
+      "cadena": "rsa_public_key",
+      "offset_archivo": "0x353bb",
+      "seccion": ".rodata"
+    },
+    {
+      "cadena": "installation_id",
+      "offset_archivo": "0x1e466",
+      "seccion": ".rodata"
+    },
+    {
+      "cadena": "operation_id",
+      "offset_archivo": "0x3a36e",
+      "seccion": ".rodata"
+    },
+    {
+      "cadena": "key_fingerprint",
+      "offset_archivo": "0x4116a",
+      "seccion": ".rodata"
+    },
+    {
+      "cadena": "la clave del QR debe tener 16 bytes",
+      "offset_archivo": "0x21779",
+      "seccion": ".rodata"
+    },
+    {
+      "cadena": "ticket.type",
+      "offset_archivo": "0x3088f",
+      "seccion": ".rodata"
+    },
+    {
+      "cadena": "rsa_unwrap_failed",
+      "offset_archivo": "0x2764f",
+      "seccion": ".rodata"
+    },
+    {
+      "cadena": "aes_decrypt_failed",
+      "offset_archivo": "0x3b206",
+      "seccion": ".rodata"
+    }
+  ],
+  "interpretacion": "Cadenas presentes dentro de .rodata de snapshot Dart AOT; presencia no indica que la rutina esté recuperada ni prueba relación causal entre cada cadena."
+}

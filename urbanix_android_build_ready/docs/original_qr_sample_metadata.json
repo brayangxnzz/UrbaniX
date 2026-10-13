@@ -1,0 +1,9 @@
+{
+  "source": "IMG_5580.JPG (QR enviado por el usuario)",
+  "qr_text_characters": 512,
+  "decoded_bytes": 384,
+  "base64_standard": true,
+  "sha256_of_decoded_bytes": "a9e7b48699002b6e7e592fe71c527e906258dd1326e38825ceb2bba12fd1b87a",
+  "content_inspection": "binario; el tamaño no demuestra RSA ni cifrado específico",
+  "compatibility_with_v2": "no demostrada por el tamaño o hash"
+}

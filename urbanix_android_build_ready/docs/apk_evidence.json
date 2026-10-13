@@ -1,0 +1,47 @@
+{
+  "apk_sha256": "7291de1981f978d24c9f0e7b928a89e036871cdd81f9f20fd775420f46593173",
+  "apk_bytes": 39168129,
+  "flutter": true,
+  "dart_aot_libraries": [
+    {
+      "name": "lib/arm64-v8a/libapp.so",
+      "bytes": 5243792,
+      "sha256": "9bcc7299b6dfb7bdf022aadfd300368353175fb85996e9c971c99c87df8d9b74"
+    },
+    {
+      "name": "lib/armeabi-v7a/libapp.so",
+      "bytes": 5767756,
+      "sha256": "ecb6df2844513a2bcffb07c6d311598abb8a5b1fcf8442654d1a776f492036d5"
+    }
+  ],
+  "strings_observed": {
+    "lib/arm64-v8a/libapp.so": [
+      "installation_id",
+      "key_fingerprint",
+      "operation_id",
+      "tickets_v2",
+      "urbanix/v2/enc",
+      "urbanix/v2/mac",
+      "qrGenerationFailed",
+      "rsa_unwrap_failed",
+      "rsa_private_key",
+      "rsa_public_key",
+      "ticket.type",
+      "la clave del QR debe tener 16 bytes"
+    ],
+    "lib/armeabi-v7a/libapp.so": [
+      "installation_id",
+      "key_fingerprint",
+      "operation_id",
+      "tickets_v2",
+      "urbanix/v2/enc",
+      "urbanix/v2/mac",
+      "qrGenerationFailed",
+      "rsa_unwrap_failed",
+      "rsa_private_key",
+      "rsa_public_key",
+      "ticket.type",
+      "la clave del QR debe tener 16 bytes"
+    ]
+  }
+}
