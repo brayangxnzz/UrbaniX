@@ -1,0 +1,39 @@
+
+name: Compilar Urbanix APK
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar proyecto
+        uses: actions/checkout@v4
+
+      - name: Configurar Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Instalar Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
+      - name: Preparar proyecto Android
+        working-directory: urbanix_android_build_ready
+        run: |
+          flutter create --platforms=android --project-name urbanix_v3 .
+          flutter pub get
+
+      - name: Compilar APK firmado de prueba
+        working-directory: urbanix_android_build_ready
+        run: flutter build apk --debug
+
+      - name: Publicar APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: Urbanix-V3-APK
+          path: urbanix_android_build_ready/build/app/outputs/flutter-apk/app-debug.apk
