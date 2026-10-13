@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:cryptography/cryptography.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'dart:math';
 
 /// Formato URBANIX_V3: auténtico en esta instalación, NO interoperable con V2.
 /// La clave privada se guarda usando almacenamiento seguro del dispositivo.
@@ -39,7 +40,11 @@ class SignedPassService {
     if (passengers < 1 || passengers > 9) throw RangeError.range(passengers, 1, 9);
     final pair = await _keyPair();
     final public = await pair.extractPublicKey();
-    final nonce = Cryptography.instance.newRandomBytes(16);
+    final random = Random.secure();
+final nonce = List<int>.generate(
+  16,
+  (_) => random.nextInt(256),
+);
     final payload = <String,dynamic>{
       'format':'URBANIX_V3_INTERNAL', 'version':3,
       'id':base64UrlEncode(nonce).replaceAll('=', ''),
